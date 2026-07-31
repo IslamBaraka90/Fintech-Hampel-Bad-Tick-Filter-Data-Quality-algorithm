@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: "Fintech Hampel Bad-Tick Filter — Data Quality Algorithm"
+message: "If you use this software, please cite it and the companion article."
+type: software
+authors:
+  - name: "The Fintech Builder"
+repository-code: "https://github.com/IslamBaraka90/Fintech-Hampel-Bad-Tick-Filter-Data-Quality-algorithm"
+url: "https://thefintechbuilder.com/market-data-engineering/cleaning-and-validation/hampel-bad-tick-filter/"
+keywords:
+  - fintech
+  - hampel
+  - outlier
+  - data-quality
+  - market-data
+  - mad
+  - robust-statistics
+license: MIT
+version: "0.1.0"

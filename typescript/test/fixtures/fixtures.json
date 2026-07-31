@@ -1,0 +1,65 @@
+{
+  "provenance": "Synthetic educational fixture; no market observation is claimed.",
+  "parameters": {
+    "window_radius": 3,
+    "threshold": 3.0,
+    "scale": 1.4826,
+    "min_history": 3
+  },
+  "canonical": {
+    "values": [
+      100.0,
+      100.1,
+      99.9,
+      100.0,
+      100.1,
+      112.0,
+      100.0,
+      100.2,
+      null,
+      100.1,
+      100.0,
+      99.9,
+      86.0,
+      100.0,
+      100.1,
+      100.0,
+      100.2
+    ],
+    "expected_causal_flags": [
+      5,
+      12
+    ],
+    "expected_centered_flags": [
+      5,
+      12
+    ],
+    "missing_index": 8,
+    "causal_checkpoint": {
+      "index": 5,
+      "window_start": 2,
+      "window_end": 5,
+      "window_count": 4,
+      "median": 100.05,
+      "mad": 0.1,
+      "score": 80.6016457575,
+      "status": "eligible",
+      "flagged": true
+    }
+  },
+  "zero_mad": {
+    "values": [
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      101.0,
+      101.0,
+      101.0
+    ],
+    "expected_causal_flags": [
+      4
+    ],
+    "expected_centered_flags": []
+  }
+}

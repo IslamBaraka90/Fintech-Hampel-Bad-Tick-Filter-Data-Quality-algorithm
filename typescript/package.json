@@ -1,0 +1,21 @@
+{
+  "name": "fintech-hampel-filter",
+  "version": "0.1.0",
+  "description": "Causal and centered Hampel bad-tick detection with look-ahead auditing and threshold calibration.",
+  "keywords": ["fintech", "hampel", "outlier", "data-quality", "market-data", "mad", "robust-statistics"],
+  "homepage": "https://github.com/IslamBaraka90/Fintech-Hampel-Bad-Tick-Filter-Data-Quality-algorithm",
+  "license": "MIT",
+  "author": "The Fintech Builder",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
+  "files": ["dist", "README.md", "LICENSE"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --experimental-strip-types --test \"test/*.test.ts\"",
+    "example": "node --experimental-strip-types examples/quickstart.ts"
+  },
+  "devDependencies": { "typescript": "^5.7.0" }
+}

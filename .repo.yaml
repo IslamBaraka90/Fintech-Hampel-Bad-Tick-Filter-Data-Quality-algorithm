@@ -1,0 +1,31 @@
+# Provenance for the publishing tool — links this standalone repo back to the
+# source topic package in the edufintech monorepo.
+repo_slug: "Fintech-Hampel-Bad-Tick-Filter-Data-Quality-algorithm"
+github: "IslamBaraka90/Fintech-Hampel-Bad-Tick-Filter-Data-Quality-algorithm"
+visibility: "public"
+
+derives_from:
+  topic_id: "D01-F02-A02"
+  title: "Hampel Bad-Tick Filter"
+  domain_id: "D01"
+  domain: "Market Data Engineering"
+  family_id: "D01-F02"
+  family: "Cleaning and Validation"
+  source_path: "algorithms/domains/D01-market-data-engineering/D01-F02-cleaning-and-validation/D01-F02-A02-hampel-bad-tick-filter"
+
+article_url: "https://thefintechbuilder.com/market-data-engineering/cleaning-and-validation/hampel-bad-tick-filter/"
+
+languages: ["python", "typescript"]
+
+npm_subpath: "fintech-algorithms/market-data-engineering/cleaning-and-validation/hampel-bad-tick-filter"
+
+# Split model: reader keeps the teaching snippet; this repo owns the production
+# filter plus the AUDIT surface (compare_modes, lookahead_cost, threshold_sweep,
+# flagged_report). Chosen because `mode="centered"` is the algorithm's one genuine
+# production hazard — it reads k observations ahead, so using it for backtest
+# features silently injects look-ahead bias. The audit surface turns the per-point
+# `lookahead_used` flag into an answer to "which flags would I have had live?".
+# Note: no streaming engine — a causal Hampel window IS bounded and could stream,
+# but the interesting axis here is the mode/threshold decision, not throughput.
+# No Yahoo path: the value of the fixture is its DELIBERATELY corrupt ticks.
+model: "split"
